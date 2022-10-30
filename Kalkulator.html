@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KALKULATOR Labib</title>
+</head>
+<style>
+  *{
+    margin:0;
+    padding:0;
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+      background-color: #e0e0e0;
+  }
+  .center{
+    
+    width:350px;
+    border-radius: 9px;
+    padding:20px;
+background: #D6DBDF;
+box-shadow: 10px 10px 20px #bebebe,
+            -10px -10px 20px #ffffff;
+  }
+  input[type="text"]{
+    margin-top: 20px;
+    padding-right: 20px;
+    font-size: 1.9rem;
+    outline: none;
+    border:none;
+    height:60px;
+    width:300px;
+    border-radius: 5px;
+    background: #e0e0e0;
+    box-shadow:  inset 10px 10px 20px #bebebe,
+             inset -10px -10px 20px #ffffff;
+    text-align: right;
+    font-weight: bold;
+
+  }
+  form .buttons{
+    width:300px;
+    margin:10px 25px 0 25px;
+    padding-right: 20px;
+
+  }
+  input[type="button"]{
+    border: none;
+    border-radius: 4px;
+background: #e0e0e0;
+box-shadow:  3px 3px 6px #bebebe,
+             -3px -3px 6px #ffffff;
+   width:50px;
+   height:55px;
+   margin:0 10px;
+   margin-top: 30px;
+  }
+  input[type="button"]:hover{
+    transition: 0.3s;
+    background-color: #9E9E9E;
+    color: #fff;
+  }
+  #clear{
+    background: #3498DB;
+    color:#fff;
+    font-weight: bold;
+  }
+  
+  #equal{
+background: #3498DB;
+    color:#fff;
+    width:290px;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  #clear:hover{
+    background-color: #3498DB;
+  }
+    #equal:hover{
+    background-color: #3498DB;
+  }
+    .design{
+    margin-top: 20px;
+  }
+  span{
+    color:#6A5ACD;
+  }
+</style>
+
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+<body>
+<div class="center">
+  <form name="forms">
+    <input type="text" id="display" name="display" disabled>
+    <div class="buttons">
+      <input type="button" id="seven" value="7">
+         <input type="button" id="eight" value="8">
+            <input type="button" id="nine" value="9">
+               <input type="button" id="divide" value="/"><br>
+                <input type="button" id="four" value="4">
+                <input type="button" id="five" value="5">
+                <input type="button" id="six" value="6">
+                <input type="button" id="multi" value="*"><br>
+                <input type="button" id="tree" value="3">
+                <input type="button" id="two" value="2">
+                <input type="button" id="one" value="1">
+                <input type="button" id="subs" value="-"><br>
+                                 <input type="button" id="dot" value=".">
+                 <input type="button" id="zero" value="0">
+                 <input type="button" id="add" value="+">
+                 <input type="button" id="clear" value="Hapus"><br>
+                  <input type="button" id="equal" value="=">
+    </div>
+  </form>
+    <div class="design"><h3>By <span>Labib</span></h3></div>
+</div>
+
+
+
+
+
+<script>
+  
+  $(document).ready(function(){
+    $('#one').click(function(){
+      document.forms.display.value += 1;
+    });
+    $('#two').click(function(){
+      document.forms.display.value
+      += 2;
+    });
+    $('#tree').click(function() {
+      document.forms.display.value += 3;
+    });
+    $('#four').click(function() {
+      document.forms.display.value += 4;
+    });
+    $('#five').click(function() {
+      document.forms.display.value += 5;
+    });
+    $('#six').click(function() {
+      document.forms.display.value += 6;
+    });
+    $('#seven').click(function() {
+      document.forms.display.value += 7;
+    });
+    $('#eight').click(function() {
+      document.forms.display.value += 8;
+    });
+    $('#nine').click(function() {
+      document.forms.display.value += 9;
+    });
+    $('#zero').click(function() {
+      document.forms.display.value += 0;
+    });
+    $('#divide').click(function() {
+      document.forms.display.value += '/';
+    });
+    $('#multi').click(function() {
+      document.forms.display.value += '*';
+    });
+    $('#subs').click(function() {
+      document.forms.display.value += '-';
+    });
+    $('#dot').click(function() {
+      document.forms.display.value += '.';
+    });
+    $('#add').click(function() {
+      document.forms.display.value += '+';
+    });
+   
+    $('#equal').click(function() {
+      if(display.value == ''){
+        alert('Please Enter Number')
+      }else{
+        document.forms.display.value = eval(document.forms.display.value);
+      }
+    });
+    $('#clear').click(function() {
+      document.forms.display.value = '';
+    });
+  })
+  
+  
+  
+</script>
+
+</body>
+
+</html>
+
